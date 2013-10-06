@@ -1,0 +1,152 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(CHEditPos) {
+	profile = "GuiDefaultProfile";
+	horizSizing = "right";
+	vertSizing = "bottom";
+	position = "0 0";
+	extent = "640 480";
+	minExtent = "8 8";
+	visible = "1";
+	hideCursor = "0";
+	bypassHideCursor = "0";
+	helpTag = "0";
+
+	new ShellWindowCtrl() {
+		profile = "ShellWindowProfile";
+		horizSizing = "right";
+		vertSizing = "bottom";
+		position = "352 147";
+		extent = "194 290";
+		minExtent = "16 28";
+		visible = "1";
+		hideCursor = "0";
+		bypassHideCursor = "0";
+		helpTag = "0";
+		text = "Edit Positions";
+		longTextBuffer = "0";
+		maxLength = "255";
+		frameBase = "gui/window";
+		borderWidth = "2";
+		resizeWidth = "0";
+		resizeHeight = "0";
+		canMove = "1";
+		canClose = "0";
+
+		new ShellTextEditCtrl(PositionsTxt) {
+			profile = "NewTextEditProfile";
+			horizSizing = "right";
+			vertSizing = "bottom";
+			position = "22 30";
+			extent = "115 40";
+			minExtent = "32 38";
+			visible = "1";
+			hideCursor = "0";
+			bypassHideCursor = "0";
+			helpTag = "0";
+			longTextBuffer = "0";
+			maxLength = "20";
+			historySize = "0";
+			password = "0";
+			IRCName = "0";
+			tabComplete = "0";
+			deniedSound = "InputDeniedSound";
+			glowOffset = "9 9";
+		};
+		new ShellScrollCtrl() {
+			profile = "NewScrollCtrlProfile";
+			horizSizing = "right";
+			vertSizing = "bottom";
+			position = "27 56";
+			extent = "147 172";
+			minExtent = "24 24";
+			visible = "1";
+			hideCursor = "0";
+			bypassHideCursor = "0";
+			helpTag = "0";
+			willFirstRespond = "1";
+			hScrollBar = "dynamic";
+			vScrollBar = "alwaysOn";
+			constantThumbHeight = "0";
+			defaultLineHeight = "15";
+			childMargin = "0 0";
+			fieldBase = "gui/shll_field";
+
+			new GuiScrollContentCtrl() {
+				profile = "GuiDefaultProfile";
+				horizSizing = "right";
+				vertSizing = "bottom";
+				position = "4 4";
+				extent = "123 164";
+				minExtent = "8 8";
+				visible = "1";
+				hideCursor = "0";
+				bypassHideCursor = "0";
+				helpTag = "0";
+
+				new ShellTextList(Pos_List) {
+					profile = "ShellTextArrayProfile";
+					horizSizing = "right";
+					vertSizing = "bottom";
+					position = "0 0";
+					extent = "123 8";
+					minExtent = "8 8";
+					visible = "1";
+					hideCursor = "0";
+					bypassHideCursor = "0";
+					helpTag = "0";
+					enumerate = "0";
+					resizeCell = "1";
+					columns = "0";
+					fitParentWidth = "1";
+					clipColumnText = "0";
+				};
+			};
+		};
+		new ShellBitmapButton() {
+			profile = "ShellButtonProfile";
+			horizSizing = "right";
+			vertSizing = "bottom";
+			position = "120 30";
+			extent = "59 38";
+			minExtent = "32 38";
+			visible = "1";
+			hideCursor = "0";
+			bypassHideCursor = "0";
+			command = "CHEditPos::AddPos();";
+			helpTag = "0";
+			text = "Add";
+			simpleStyle = "0";
+		};
+		new ShellBitmapButton() {
+			profile = "ShellButtonProfile";
+			horizSizing = "right";
+			vertSizing = "bottom";
+			position = "19 219";
+			extent = "160 38";
+			minExtent = "32 38";
+			visible = "1";
+			hideCursor = "0";
+			bypassHideCursor = "0";
+			command = "CHEditPos::RemovePos();";
+			helpTag = "0";
+			text = "Remove Selected";
+			simpleStyle = "0";
+		};
+		new ShellBitmapButton() {
+			profile = "ShellButtonProfile";
+			horizSizing = "right";
+			vertSizing = "bottom";
+			position = "51 252";
+			extent = "99 38";
+			minExtent = "32 38";
+			visible = "1";
+			hideCursor = "0";
+			bypassHideCursor = "0";
+			command = "CHEditPos::Done();";
+			helpTag = "0";
+			text = "Done";
+			simpleStyle = "0";
+		};
+	};
+};
+//--- OBJECT WRITE END ---

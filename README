@@ -1,0 +1,16 @@
+
+/////////////////////////////////////////////////////////////////////////////
+//                              CAPTAIN HUD                                //
+-----------------------------------------------------------------------------
+//                                  by                                     //
+//                            <=RD=> Kraska                                //
+/////////////////////////////////////////////////////////////////////////////
+
+Having trouble assigning and announcing positions before a scrim or match? 
+Captain Hud stores your players most frequent positions and allows you to 
+quickly filter your roster based on current in game players and their roles. 
+Once you select your lineup simply hit the "announce" button and all the 
+players positions will be posted in team chat. 
+
+To install, place the .vl2 file in your base folder, and assign a key to
+captain hud.
